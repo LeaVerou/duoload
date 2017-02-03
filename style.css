@@ -1,0 +1,62 @@
+* {
+	font: inherit;
+}
+
+body {
+	display: flex;
+	flex-flow: column;
+	margin: 0;
+	font: 100%/1.5 Helvetica Neue, sans-serif;
+	min-height: 100vh;
+}
+
+header {
+	font-size: 150%;
+}
+
+main {
+	flex: 1;
+}
+
+form, main {
+	display: flex;
+}
+
+input, iframe {
+	flex: 1;
+}
+
+input {
+	padding: .5em;
+	border: 0;
+	border-bottom: 1px solid yellowgreen;
+}
+
+	input:last-of-type {
+		order: 1;
+	}
+
+iframe {
+	border: 0;
+}
+
+	iframe:last-of-type {
+		border-left: 1px solid #bbb;
+	}
+
+button {
+	position: relative;
+	padding: .1em .6em;
+	border: none;
+	background: yellowgreen;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	font-size: 150%;
+
+	letter-spacing: -.05em;
+}
+
+	button:hover {
+		background: hsl(30, 100%, 50%);
+	}
