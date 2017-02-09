@@ -36,6 +36,10 @@ input {
 		order: 1;
 	}
 
+html, body, iframe {
+	height: 100%;
+}
+
 iframe {
 	border: 0;
 }
