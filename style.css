@@ -42,6 +42,7 @@ html, body, iframe {
 
 iframe {
 	border: 0;
+	height: 100vh;
 }
 
 	iframe:last-of-type {
