@@ -9,17 +9,61 @@
 
 <header>
 	<form>
-		<input type="url" id="url1" placeholder="First URL" value="http://lea.verou.me/" autocomplete="url">
-		<input type="url" id="url2" placeholder="Second URL" value="http://svgees.us/" autocomplete="url">
+		<div class="area_url">
+			<select class="device_select" data-target-iframe="0">
+				<option value="auto" selected>Responsive</option>
+				<option value="360x640">Galaxy S5</option>
+				<option value="768x1024">iPad</option>
+				<option value="768x1024">iPad Mini</option>
+				<option value="1024x1366">iPad Pro</option>
+				<option value="320x480">iPhone4</option>
+				<option value="320x568">Ipnone 5</option>
+				<option value="375x667">Ipnone 6</option>
+				<option value="414x736">Ipnone 6 Plus</option>
+				<option value="1440x900">Laptop with HiDPI screen</option>
+				<option value="1280x800">Laptop with MDPI screen</option>
+				<option value="1280x950">Laptop with touch</option>
+				<option value="412x732">Nexus 5X</option>
+				<option value="412x732">Nexus 6P</option>
+			</select>
+			<input type="url" id="url1" placeholder="First URL" value="http://lea.verou.me/" autocomplete="url">
+		</div>
+		<div class="area_url">
+			<input type="url" id="url2" placeholder="Second URL" value="http://svgees.us/" autocomplete="url">
+			<select class="device_select" data-target-iframe="1">
+				<option value="auto" selected>Responsive</option>
+				<option value="360x640">Galaxy S5</option>
+				<option value="768x1024">iPad</option>
+				<option value="768x1024">iPad Mini</option>
+				<option value="1024x1366">iPad Pro</option>
+				<option value="320x480">iPhone4</option>
+				<option value="320x568">Ipnone 5</option>
+				<option value="375x667">Ipnone 6</option>
+				<option value="414x736">Ipnone 6 Plus</option>
+				<option value="1440x900">Laptop with HiDPI screen</option>
+				<option value="1280x800">Laptop with MDPI screen</option>
+				<option value="1280x950">Laptop with touch</option>
+				<option value="412x732">Nexus 5X</option>
+				<option value="412x732">Nexus 6P</option>
+			</select>
+		</div>
 		<button>Go!</button>
 	</form>
 </header>
 <main>
-	<iframe></iframe>
-	<iframe></iframe>
+	<div class="area_iframe">
+		<iframe></iframe>
+	</div>
+	<div class="area_iframe">
+		<iframe></iframe>
+	</div>
 </main>
 
 <script src="code.js"></script>
 
 </body>
 </html>
+
+
+	 
+

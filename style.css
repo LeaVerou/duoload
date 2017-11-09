@@ -22,27 +22,31 @@ form, main {
 	display: flex;
 }
 
-input, iframe {
-	flex: 1;
-}
-
 input {
 	padding: .5em;
 	border: 0;
-	border-bottom: 1px solid yellowgreen;
+	flex: 3;
 }
 
-	input:last-of-type {
-		order: 1;
-	}
+select {
+	font-size: 16px;
+  display: inline-block;
+  padding: .5em;
+  border-color: yellowgreen;
+  color: yellowgreen;
+  background: #fff;
+  border-width: 0 1px 0 1px;
+  flex: 1;
+}
 
 iframe {
 	border: 0;
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #bbb;
+	transition: width .4s linear, height .4s linear;
 }
-
-	iframe:last-of-type {
-		border-left: 1px solid #bbb;
-	}
 
 button {
 	position: relative;
@@ -53,10 +57,37 @@ button {
 	font-weight: bold;
 	cursor: pointer;
 	font-size: 150%;
-
 	letter-spacing: -.05em;
 }
 
 	button:hover {
 		background: hsl(30, 100%, 50%);
+	}
+
+.area_url {
+	flex: 1;
+	display: flex;
+	border-bottom: 1px solid yellowgreen;
+}
+
+	.area_url:last-of-type {
+		order: 1;
+	}
+
+.area_iframe {
+	flex: 1;
+	display: flex;
+	background-color: #fff;
+	background-image: linear-gradient(45deg, #ddd 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd), 
+	linear-gradient(45deg, #ddd 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd);
+	background-size:32px 32px;
+	background-position:0 0, 16px 16px;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+	.area_iframe:last-of-type {
+		border-left: 1px solid #bbb;
 	}
