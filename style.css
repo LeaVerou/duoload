@@ -44,6 +44,24 @@ iframe {
 		border-left: 1px solid #bbb;
 	}
 
+.timer {
+	position: fixed;
+	bottom: 0;
+	font-size: 14px;
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid #ddd;
+	font-family: monospace;
+	padding: 10px;
+}
+
+#timer1 {
+	left: 0;
+}
+
+#timer2 {
+	right: 0;
+}
+
 button {
 	position: relative;
 	padding: .1em .6em;
