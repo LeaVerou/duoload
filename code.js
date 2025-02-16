@@ -42,7 +42,8 @@ function startTimer(className) {
 
 	timerInterval[className] = setInterval(function () {
 		let elapsedTime = Date.now() - startTime;
-		timerElement.textContent = (elapsedTime / 1000).toFixed(2) + "s";
+		let value = elapsedTime > 1000 ? (elapsedTime / 1000).toFixed(2) + "s" : elapsedTime + "ms";
+		timerElement.textContent = value;
 	}, 100);
 }
 
