@@ -9,8 +9,9 @@ function $$(selector) {
 var iframes = $$("iframe");
 var urls = $$("input");
 
-$("form").onsubmit = function() {
-	for (let i=0; i < 2; i++) {
+$("form").onsubmit = function () {
+	for (let i = 0; i < 2; i++) {
+		startTimer(`#timer${i + 1}`);
 		let iframe = iframes[i];
 		let url = urls[i].value;
 
@@ -20,10 +21,32 @@ $("form").onsubmit = function() {
 
 		iframe.src = url;
 
-		iframe.onload = function() {
+		iframe.onload = function () {
 			console.timeEnd(url + " load");
+			stopTimer(`#timer${i + 1}`);
 		}
 	}
 
 	return false;
+}
+
+let timerInterval = {};
+
+function startTimer(className) {
+	let startTime = Date.now();
+	let timerElement = $(className);
+	if (!timerElement) {
+		console.log(`Timer ${className} not found`);
+		return;
+	}
+
+	timerInterval[className] = setInterval(function () {
+		let elapsedTime = Date.now() - startTime;
+		let value = elapsedTime > 1000 ? (elapsedTime / 1000).toFixed(2) + "s" : elapsedTime + "ms";
+		timerElement.textContent = value;
+	}, 100);
+}
+
+function stopTimer(className) {
+	clearInterval(timerInterval[className]);
 }
